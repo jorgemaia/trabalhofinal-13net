@@ -1,0 +1,20 @@
+{
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "myIoTHubMessage",
+      "direction": "in",
+      "eventHubName": "samples-workitems",
+      "connection": "RM330673FiapIotHub_events_IOTHUB",
+      "consumerGroup": "consumer1",
+      "cardinality": "many"
+    },
+    {
+      "type": "table",
+      "name": "$return",
+      "tableName": "outTable",
+      "connection": "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING",
+      "direction": "out"
+    }
+  ]
+}
